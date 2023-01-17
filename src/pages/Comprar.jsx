@@ -13,7 +13,38 @@ export default class Home extends Component {
         <Header/>
         <div className="corpo">
           <div className='corpoGrid'>
-            <div className="comprarEsq">alo</div>
+            <div className="comprarEsq">
+              <label htmlFor="" className='labelEsq'>
+                Veículo
+                <select name="" id="">
+                  <option value="">SUV</option>
+                  <option value="">Hetch</option>
+                </select>
+              </label>
+              <label htmlFor="" className='labelEsq'>
+                Marca
+                <select name="" id="">
+                  <option value="">Fiat</option>
+                  <option value="">Jeep</option>
+                </select>
+              </label>
+              <label htmlFor="" className='labelEsq'>
+                Ano Modelo
+                <input type="radio" name="ano" id="" />2020
+                <input type="radio" name="ano" id="" />2021
+                <input type="radio" name="ano" id="" />2022
+                <input type="radio" name="ano" id="" />2023
+              </label>
+              <label htmlFor="" className='labelEsq'>
+                Preço
+                <input type="range" name="" id="" min={20000.00} max={500000.00} />
+              </label>
+              <label htmlFor="" className='labelEsq'>
+                KM
+                <input type="range" name="" id="" min={40} max={113141} />
+              </label>
+              <button>Pesquisar</button>
+            </div>
             <div className="comprarDir">
               <div className="comprarTitulo">Seminovos SUV</div>
               <div className="comprarCarros">
