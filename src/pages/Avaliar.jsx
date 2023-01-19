@@ -8,7 +8,11 @@ export default class Home extends Component {
     return (
       <div>
         <Header/>
-        <div className="corpo"> Avaliar</div>
+        <div className="corpo">
+          <div className="cardAvaliar">
+            <form action="" className="avaliar"></form>
+          </div>
+        </div>
         <Footer/>
       </div>
     )
