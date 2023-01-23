@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
+import axios from 'axios';
 import Header from '../Header';
 import Footer from '../Footer';
 import './Corpo.css';
@@ -6,62 +7,50 @@ import './Comprar.css';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import SpeedIcon from '@mui/icons-material/Speed';
 
-export default class Home extends Component {
-  render() {
+export default function Home() {
+
+  const [listaCarros, setCarros] = useState([]);
+
+
+  const getCarros = async () => {
+  try {
+    const resposta = await axios.get(
+      "https://concessionaria.onrender.com/Sedan"
+      );
+    console.log(resposta.data);
+    const data = resposta.data;
+
+    setCarros(data);
+  } catch (error) {
+    console.log(error)
+  }};
+  useEffect(() =>{
+    getCarros();
+  }, []);
+
     return (
       <div>
         <Header/>
         <div className="corpo">
           <div className='corpoGrid'>
-            <div className="comprarEsq">
-              <label htmlFor="" className='labelEsq'>
-                Veículo
-                <select name="" id="">
-                  <option value="">SUV</option>
-                  <option value="">Hetch</option>
-                </select>
-              </label>
-              <label htmlFor="" className='labelEsq'>
-                Marca
-                <select name="" id="">
-                  <option value="">Fiat</option>
-                  <option value="">Jeep</option>
-                </select>
-              </label>
-              <label htmlFor="" className='labelEsq'>
-                Ano Modelo
-                <input type="radio" name="ano" id="" />2020
-                <input type="radio" name="ano" id="" />2021
-                <input type="radio" name="ano" id="" />2022
-                <input type="radio" name="ano" id="" />2023
-              </label>
-              <label htmlFor="" className='labelEsq'>
-                Preço
-                <input type="range" name="" id="" min={20000.00} max={500000.00} />
-              </label>
-              <label htmlFor="" className='labelEsq'>
-                KM
-                <input type="range" name="" id="" min={40} max={113141} />
-              </label>
-              <button>Pesquisar</button>
-            </div>
-            <div className="comprarDir">
-              <div className="comprarTitulo">Seminovos SUV</div>
-              <div className="comprarCarros">
-                <div className="cardCarros">
-                  <img src='../assets/download.png' alt=""/>
-                  <span className="cimaNomeCarro">Renegade</span>
-                  <span className="cimaMarcaCarro">Jeep</span>
-                  <span className="meioPreco">R$ 88.900,00</span>
-                  <span className="meioKm"><SpeedIcon/>&nbsp; 45 Km</span>
-                  <span className="meioAno"><CalendarMonthIcon/>&nbsp; 2020</span>
+            <div className="comprarTitulo">Seminovos SUV</div>
+            <div className="comprarCarros">
+              {listaCarros.length === 0 ? (<p>Carregando...</p>) : (
+                listaCarros.map((carros) => (
+                  <div className="cardCarros" key={carros.id}>
+                  {/* <img src='../assets/download.png' alt=""/> */}
+                  <span className="cimaNomeCarro">{carros.modelo}</span>
+                  <span className="cimaMarcaCarro">{carros.marca}</span>
+                  <span className="meioPreco">R$ {carros.preço}</span>
+                  <span className="meioKm"><SpeedIcon/>&nbsp; {carros.km} Km</span>
+                  <span className="meioAno"><CalendarMonthIcon/>&nbsp; {carros.ano}</span>
                   <button className="baixoBotao">Comprar</button>
                 </div>
-              </div>
+                ))
+              )}
             </div>
           </div></div>
         <Footer/>
       </div>
     )
-  }
 }

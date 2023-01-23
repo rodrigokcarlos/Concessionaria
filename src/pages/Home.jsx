@@ -5,12 +5,14 @@ import Header from '../Header';
 import Footer from '../Footer';
 import './Corpo.css';
 import './Home.css';
+import fotinha from '../assets/ccce.jpg';
+
 
 
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <div className='divisao'>
         <Header/>
         <div className="corpo">
           <div className="corpoMsg">
@@ -18,7 +20,7 @@ export default class Home extends Component {
               <Carousel.Item interval={1500}>
                 <img
                   className='d-block w-100'
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
+                  src={fotinha}
                   alt="Image One"
                   />
                   <Carousel.Caption>

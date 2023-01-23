@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./Header.css";
 import { Link } from "react-router-dom";
+import logo from './assets/duduSF.png';
 
 export default class Header extends Component {
   render() {
@@ -8,7 +9,7 @@ export default class Header extends Component {
      <div className="header">
         <div className="cabecalho">
           <nav className="menuNavegacao">
-            <div className="logoSite"><img src="" alt="" /> LogoLogoLgog</div>
+                <div className="logoSite"><img className='logoDudu' src={logo} alt="duduLogo"/></div>
             <input type="text" className="busca" placeholder='Buscar'/>
             <ul>
               <li><Link to="/">Home</Link></li>
