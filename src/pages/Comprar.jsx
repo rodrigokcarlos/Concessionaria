@@ -29,20 +29,20 @@ export default function Home() {
   }, []);
 
     return (
-      <div>
+      <div className='divisao'>
         <Header/>
         <div className="corpo">
           <div className='corpoGrid'>
             <div className="comprarTitulo">Seminovos SUV</div>
             <div className="comprarCarros">
-              {listaCarros.length === 0 ? (<p>Carregando...</p>) : (
+              {listaCarros.length === 0 ? (<div className="c-loader"></div>) : (
                 listaCarros.map((carros) => (
                   <div className="cardCarros" key={carros.id}>
                   {/* <img src='../assets/download.png' alt=""/> */}
                   <span className="cimaNomeCarro">{carros.modelo}</span>
                   <span className="cimaMarcaCarro">{carros.marca}</span>
                   <span className="meioPreco">R$ {carros.preço}</span>
-                  <span className="meioKm"><SpeedIcon/>&nbsp; {carros.km} Km</span>
+                  <span className="meioKm"><SpeedIcon/> {carros.km} Km</span>
                   <span className="meioAno"><CalendarMonthIcon/>&nbsp; {carros.ano}</span>
                   <button className="baixoBotao">Comprar</button>
                 </div>

@@ -8,8 +8,6 @@
     flex: 0.1;
 }
 .corpo{
-    flex: 0.8;
-}
-.rodape{
-    flex: 0.1;
+    flex: 0.9;
+    height: 100%;
 }
