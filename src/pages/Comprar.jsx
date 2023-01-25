@@ -15,9 +15,10 @@ export default function Home() {
   const getCarros = async () => {
   try {
     const resposta = await axios.get(
-      "https://concessionaria.onrender.com/Sedan"
+      "https://concessionaria.onrender.com/Hatch"
       );
     console.log(resposta.data);
+    console.log(resposta.data[1].img)
     const data = resposta.data;
 
     setCarros(data);
@@ -38,7 +39,7 @@ export default function Home() {
               {listaCarros.length === 0 ? (<div className="c-loader"></div>) : (
                 listaCarros.map((carros) => (
                   <div className="cardCarros" key={carros.id}>
-                  {/* <img src='../assets/download.png' alt=""/> */}
+                  <img className='imgCarro' src={carros.img} alt=""/>
                   <span className="cimaNomeCarro">{carros.modelo}</span>
                   <span className="cimaMarcaCarro">{carros.marca}</span>
                   <span className="meioPreco">R$ {carros.preço}</span>

@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import './Corpo.css';
 import './Home.css';
 import fotinha from '../assets/ccce.jpg';
+import fotinha2 from '../assets/foto2.jpeg';
 
 
 
@@ -31,7 +32,7 @@ export default class Home extends Component {
               <Carousel.Item interval={1500}>
                 <img
                   className='d-block w-100'
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png"
+                  src={fotinha2}
                   alt="Image Two"
                   />
                 <Carousel.Caption>
