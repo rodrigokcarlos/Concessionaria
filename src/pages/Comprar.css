@@ -16,13 +16,13 @@
     justify-content: center;
 }
 .cardCarros{
-    background-color: aqua;
+    background-color: rgb(170, 255, 255);
     width: 300px;
     height: 600px;
     margin: 10px;
     display: grid;
     border-radius: 15px;
-    border: 3px solid black;
+    border: 3px solid darkgrey;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 250px 0.5fr 1fr 0.5fr 1fr 1fr;
 }
@@ -31,7 +31,7 @@
     grid-row: 1 / 2;
     width: 240px;
     margin: 10px 30px 0;
-    border: 1px solid black;
+    border: 1px solid darkgrey;
     border-radius: 30%;
 }
 .cimaNomeCarro{
@@ -81,6 +81,20 @@
     border-radius: 15px;
     outline: none;
     border: none;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 10%;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 19px;
+    border: 1px solid darkgrey;
+    color: dimgray;
+}
+.baixoBotao:hover{
+    transform: scale(1.025);
+    background-color: #e7e7e7;
 }
 .c-loader {
     animation: is-rotating 1s infinite;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./Header.css";
 import { Link } from "react-router-dom";
-import logo from './assets/duduSF.png';
+import logo from '../../assets/duduSF.png';
 
 export default class Header extends Component {
   render() {
@@ -13,15 +13,15 @@ export default class Header extends Component {
             <input type="text" className="busca" placeholder='Buscar'/>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/comprar">Comprar</Link>
+              <li>Comprar
                 <ul className="dropdown">
-                  <li>Hatch</li>
-                  <li>Sedan</li>
-                  <li>SUV</li>
+                  <Link to="/hatch"><li>Hatch</li></Link>
+                  <Link to="/sedan"><li>Sedan</li></Link>
+                  <Link to="/suv"><li>SUV</li></Link>
                 </ul>
               </li>
               <li><Link to="/vender">Vender</Link></li>
-              <li><Link to="/contato">Equipe</Link></li>
+              <li><Link to="/Equipe">Equipe</Link></li>
             </ul>
             
           </nav>

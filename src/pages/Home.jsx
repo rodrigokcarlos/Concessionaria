@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './Corpo.css';
 import './Home.css';
 import fotinha from '../assets/ccce.jpg';
