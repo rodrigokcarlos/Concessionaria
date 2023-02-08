@@ -32,7 +32,7 @@ export default function Sedan() {
         <Header/>
         <div className="corpo">
           <div className='corpoGrid'>
-            <div className="comprarTitulo">Seminovos SUV</div>
+            <div className="comprarTitulo">Seminovos Sedan</div>
             <div className="comprarCarros">
               {listaCarros.length === 0 ? (<div className="c-loader"></div>) : (
                 listaCarros.map((carros) => (

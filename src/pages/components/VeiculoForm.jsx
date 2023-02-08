@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const VeiculoForm = () => {
   return (
@@ -8,4 +8,4 @@ const VeiculoForm = () => {
   )
 }
 
-export default VeiculoForm
+export default VeiculoForm;
