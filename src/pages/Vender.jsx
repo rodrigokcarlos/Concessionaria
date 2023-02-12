@@ -6,8 +6,11 @@ import {FiSend} from 'react-icons/fi';
 import { GrFormNext, GrFormPrevious} from 'react-icons/gr';
 import PessoalForm from './components/PessoalForm';
 import VeiculoForm from './components/VeiculoForm';
-import FormForm from './components/formForm';
-import TipoVeiculo from './components/tipoVeiculo';
+import FormForm from './components/FormForm';
+import TipoVeiculo from './components/TipoVeiculo';
+import Steps from './components/Steps';
+import './Vender.css';
+import './components/Form.css';
 
 //hooks
 import { useForm } from './hooks/useForm';
@@ -23,7 +26,7 @@ export default function Home() {
         <Header/>
         <div className="corpo">
           <div className="form-container">
-            <p>etapas(texto, algo para o titulo da pagina)</p>
+            <Steps currentStep={currentStep} />
             <form onSubmit={(e) => changeStep(currentStep +1, e)}>
               <div className="inputs-container">{currentComponent}</div>
               <div className="actions">

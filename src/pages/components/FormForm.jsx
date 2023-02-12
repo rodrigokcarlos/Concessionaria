@@ -8,10 +8,9 @@ export default function FormForm() {
         Para vender seu carro precisamos avaliá-lo primeiro!
         </h2>
         <p>
-        Como realizar a avaliação:
-        Informar dados para contato
-        Informar dados do veículo
-        Enviar Algumas Fotos do seu carro
+        Informe dados para contato, 
+        Informe dados do veículo
+        E envie Algumas Fotos de seu veículo
         </p>
     </div>
   )

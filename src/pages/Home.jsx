@@ -18,26 +18,26 @@ export default class Home extends Component {
         <div className="corpo">
           <div className="corpoMsg">
             <Carousel pause="hover" controls={false}>
-              <Carousel.Item interval={1500}>
+              <Carousel.Item interval={2500}>
                 <img
                   className='d-block w-100'
                   src={fotinha}
                   alt="Image One"
                   />
                   <Carousel.Caption>
-                    <p>Carros</p>
-                    <p>Seminovos a um clique!</p>
+                    <p className='carrosselTexto'>Carros</p>
+                    <p className='carrosselTexto'>Seminovos a um clique!</p>
                   </Carousel.Caption>
               </Carousel.Item>
-              <Carousel.Item interval={1500}>
+              <Carousel.Item interval={2500}>
                 <img
                   className='d-block w-100'
                   src={fotinha2}
                   alt="Image Two"
                   />
                 <Carousel.Caption>
-                  <p>Avaliamos seu Carro</p>
-                  <p>sem sair de casa!</p>
+                  <p className='carrosselTexto'>Avaliamos seu Carro</p>
+                  <p className='carrosselTexto'>sem sair de casa!</p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
