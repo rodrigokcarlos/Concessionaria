@@ -1,7 +1,7 @@
 import React from 'react';
 import './Form.css';
 
-export default function FormForm() {
+export default function FormForm({data}) {
   return (
     <div className='form-corpo'>
         <h2>

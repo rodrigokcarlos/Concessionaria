@@ -1,7 +1,7 @@
 import React from 'react';
-import './Form.css'
+import './Form.css';
 
-const PessoalForm = () => {
+const PessoalForm = ({data, updateFieldHandler}) => {
   return (
     <div>
         <div className="form-control">
@@ -12,6 +12,8 @@ const PessoalForm = () => {
           id='name'
           placeholder='Digite o seu nome'
           required
+          value={data.name || ''}
+          onChange={(e) => updateFieldHandler('name', e.target.value)}
           />
         </div>
         <div className="form-control">
@@ -22,6 +24,8 @@ const PessoalForm = () => {
           id='email'
           placeholder='Digite o seu e-mail'
           required
+          value={data.email || ''}
+          onChange={(e) => updateFieldHandler('email', e.target.value)}
           />
         </div>
     </div>

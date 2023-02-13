@@ -9,15 +9,43 @@ import VeiculoForm from './components/VeiculoForm';
 import FormForm from './components/FormForm';
 import TipoVeiculo from './components/TipoVeiculo';
 import Steps from './components/Steps';
+import FormFinal from './components/FormFinal';
 import './Vender.css';
 import './components/Form.css';
 
 //hooks
 import { useForm } from './hooks/useForm';
+import { useState } from 'react';
+
+const formTemplate = {
+  name: '',
+  email: '',
+  tipo: '',
+  marca: '',
+  modelo: '',
+  ano: '',
+  km: '',
+  cor: '',
+  foto: '',
+};
 
 export default function Home() {
 
-  const formComponents = [ <FormForm/>, <PessoalForm/>, <TipoVeiculo/>, <VeiculoForm/>];
+  const [data, setData] = useState(formTemplate);
+
+  const updateFieldHandler = (key, value) => {
+    setData((prev) => {
+      return {...prev, [key]: value};
+    })
+  }
+
+  const formComponents = [ 
+  <FormForm data={data} />, 
+  <PessoalForm data={data} updateFieldHandler={updateFieldHandler} />, 
+  <TipoVeiculo data={data} updateFieldHandler={updateFieldHandler} />, 
+  <VeiculoForm data={data} updateFieldHandler={updateFieldHandler} />, 
+  <FormFinal data={data} />
+  ];
 
   const {currentStep, currentComponent, changeStep, isLastStep, firstStep} = useForm(formComponents);
 
@@ -42,7 +70,7 @@ export default function Home() {
                   </button>
                 ):(
                   <button type='submit'>
-                    <span>Enviar</span>
+                    <span>Vender</span>
                     <FiSend/>
                   </button>
                 )}
