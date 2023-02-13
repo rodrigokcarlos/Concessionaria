@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Rod from '../assets/rod.jpeg';
 import Lud from '../assets/lu.jpeg';
 import Wes from '../assets/Wes.jpg';
+import './Equipe.css';
 
 export default class Equipe extends Component {
     render() {

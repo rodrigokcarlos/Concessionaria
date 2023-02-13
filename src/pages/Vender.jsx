@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect} from 'react'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './Corpo.css';
@@ -48,7 +48,22 @@ export default function Home() {
   ];
 
   const {currentStep, currentComponent, changeStep, isLastStep, firstStep} = useForm(formComponents);
+  
+  // const vendeCarros = async () => {
+  //   try {
+  //     const resposta = await axios.post(
+  //       "https://concessionaria.onrender.com/Hatch"
+  //       );
+  //     const req = resposta.data;
+  
+  //     setCarros(req);
+  //   } catch (error) {
+  //     console.log(error)
+  //   }};
 
+  // useEffect(() =>{
+  //   precoCarro();
+  // }, []);
     return (
       <div className='divisao'>
         <Header/>
