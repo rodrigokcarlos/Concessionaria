@@ -28,7 +28,7 @@ const VeiculoForm = ({data, updateFieldHandler}) => {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="ano">ano:</label>
+          <label htmlFor="ano">Ano:</label>
           <input 
           type="text" 
           name='text'
@@ -64,7 +64,7 @@ const VeiculoForm = ({data, updateFieldHandler}) => {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="foto">foto:</label>
+          <label htmlFor="foto">Foto:</label>
           <input 
           type="text" 
           name='text'

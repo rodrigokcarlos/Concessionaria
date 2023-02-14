@@ -1,4 +1,5 @@
 import React, { Component, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './Corpo.css';
@@ -12,6 +13,7 @@ import Steps from './components/Steps';
 import FormFinal from './components/FormFinal';
 import './Vender.css';
 import './components/Form.css';
+import axios from 'axios';
 
 //hooks
 import { useForm } from './hooks/useForm';
@@ -27,6 +29,7 @@ const formTemplate = {
   km: '',
   cor: '',
   foto: '',
+  preco: '',
 };
 
 export default function Home() {
@@ -44,26 +47,63 @@ export default function Home() {
   <PessoalForm data={data} updateFieldHandler={updateFieldHandler} />, 
   <TipoVeiculo data={data} updateFieldHandler={updateFieldHandler} />, 
   <VeiculoForm data={data} updateFieldHandler={updateFieldHandler} />, 
-  <FormFinal data={data} />
+  <FormFinal data={data} updateFieldHandler={updateFieldHandler} />
   ];
 
   const {currentStep, currentComponent, changeStep, isLastStep, firstStep} = useForm(formComponents);
   
-  // const vendeCarros = async () => {
-  //   try {
-  //     const resposta = await axios.post(
-  //       "https://concessionaria.onrender.com/Hatch"
-  //       );
-  //     const req = resposta.data;
-  
-  //     setCarros(req);
-  //   } catch (error) {
-  //     console.log(error)
-  //   }};
+  const navigate = useNavigate()
 
-  // useEffect(() =>{
-  //   precoCarro();
-  // }, []);
+  const vendeCarro = async(e) => {
+    e.preventDefault();
+
+    const marca = data.marca;
+    const modelo = data.modelo;
+    const ano = data.ano;
+    const preço = data.preco;
+    const km = data.km;
+    const cor = data.cor;
+    const img = data.foto;
+    const post = {
+      marca,
+      modelo,
+      ano,
+      preço,
+      km,
+      cor,
+      img
+    }  
+    await axios.post(`https://concessionaria.onrender.com/${data.tipo}`, post)
+
+    navigate('/');
+  }
+  function precoCarro() {
+    const vendeHatch = 80000;
+    const vendeSedan = 100000;
+    const vendeSUV = 130000;
+    const kmCarro = data.km;
+    const anoCarro = data.ano;
+    const anoAtual = 2023;
+
+    const calculaAno = anoAtual - anoCarro;
+    const precoAno = calculaAno * 1000;
+    let precoFinal = 0;
+
+    if(data.tipo === 'Hatch'){
+      precoFinal = vendeHatch - kmCarro - precoAno;
+    }
+    if(data.tipo === 'Sedan'){
+      precoFinal = vendeSedan - kmCarro - precoAno;
+    }
+    if(data.tipo === 'SUV'){
+      precoFinal = vendeSUV - kmCarro - precoAno;
+    }
+    data.preco = precoFinal;
+  }
+
+  useEffect(() =>{
+    precoCarro();
+  });
     return (
       <div className='divisao'>
         <Header/>
@@ -84,7 +124,7 @@ export default function Home() {
                     <GrFormNext/>
                   </button>
                 ):(
-                  <button type='submit'>
+                  <button type='submit' onClick={(e) => vendeCarro(e)}>
                     <span>Vender</span>
                     <FiSend/>
                   </button>

@@ -6,6 +6,7 @@ import './Corpo.css';
 import './Comprar.css';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import SpeedIcon from '@mui/icons-material/Speed';
+import { Link } from 'react-router-dom';
 
 export default function SUV() {
 
@@ -37,13 +38,13 @@ export default function SUV() {
               {listaCarros.length === 0 ? (<div className="c-loader"></div>) : (
                 listaCarros.map((carros) => (
                   <div className="cardCarros" key={carros.id}>
-                  <img className='imgCarro' src={carros.img} alt=""/>
+                  <div className='dimgCarro'><img className='imgCarro' src={carros.img} alt=""/></div>
                   <span className="cimaNomeCarro">{carros.modelo}</span>
                   <span className="cimaMarcaCarro">{carros.marca}</span>
                   <span className="meioPreco">R$ {carros.preço}</span>
                   <span className="meioKm"><SpeedIcon/>&nbsp; {carros.km} Km</span>
                   <span className="meioAno"><CalendarMonthIcon/>&nbsp; {carros.ano}</span>
-                  <button className="baixoBotao">Comprar</button>
+                  <Link className="baixoLinkBotao" to={`/suv/${carros.id}`}><button className="baixoBotao">Comprar</button></Link>
                 </div>
                 ))
               )}

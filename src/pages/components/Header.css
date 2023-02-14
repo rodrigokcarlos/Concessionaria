@@ -22,13 +22,6 @@
     width: 50px;
     padding-left: 30px;
 }
-.busca{
-    width: 400px;
-    border-radius: 10px;
-    border: none;
-    padding-left: 15px;
-    outline: none;
-}
 .menuNavegacao ul li {
     list-style: none;
     margin: 0 auto;

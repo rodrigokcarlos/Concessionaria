@@ -7,6 +7,9 @@ import Equipe from './pages/Equipe';
 import Hatch from './pages/Hatch';
 import Sedan from './pages/Sedan';
 import SUV from './pages/SUV';
+import CarroHatch from './pages/CarroHatch';
+import CarroSedan from './pages/CarroSedan';
+import CarroSUV from './pages/CarroSUV';
 
 function App() {
   return (
@@ -20,6 +23,11 @@ function App() {
           <Route path='/vender' element={<Vender/>} />
           <Route path='/avaliar' element={<Avaliar/>} />
           <Route path='/equipe' element={<Equipe/>} />
+          <Route path='/hatch/:id' element={<CarroHatch/>}/>
+          <Route path='/sedan/:id' element={<CarroSedan/>}/>
+          <Route path='/suv/:id' element={<CarroSUV/>}/>
+          
+          
         </Routes>
      </Router>
     </div>

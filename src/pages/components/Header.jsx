@@ -10,7 +10,6 @@ export default class Header extends Component {
         <div className="cabecalho">
           <nav className="menuNavegacao">
                 <div className="logoSite"><img className='logoDudu' src={logo} alt="duduLogo"/></div>
-            <input type="text" className="busca" placeholder='Buscar'/>
             <ul>
               <li><Link to="/">Home</Link></li>
               <li>Comprar

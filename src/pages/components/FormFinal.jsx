@@ -6,34 +6,7 @@ const returnData = {
 }
 
 function FormFinal({data}) {
-    let tabelaFipe = 0;
-    function precoCarro() {
-        const vendeHatch = 80000;
-        const vendeSedan = 100000;
-        const vendeSUV = 120000;
-        const kmCarro = data.km;
-        const anoCarro = data.ano;
-        const anoAtual = 2023;
-    
-        const calculaAno = anoAtual - anoCarro;
-        const precoAno = calculaAno * 1000;
-        
 
-        if(data.tipo === 'Hatch'){
-            tabelaFipe = vendeHatch - kmCarro - precoAno;
-        }
-        if(data.tipo === 'Sedan'){
-            tabelaFipe = vendeSedan - kmCarro - precoAno;
-        }
-        if(data.tipo === 'SUV'){
-            tabelaFipe = vendeSUV - kmCarro - precoAno;
-        }
-    
-      }
-
-      useEffect(() =>{
-        precoCarro();
-      }, []);
   return (
     <div className='final-container'>
         <h2>{data.name}, Falta pouco...</h2>
@@ -51,7 +24,7 @@ function FormFinal({data}) {
             <span>Km: {data.km}</span>
         </p>
         <h3>Seu veículo está avaliado em:</h3>
-        <h4>{tabelaFipe}</h4>
+        <h4 onChange={(e) => updateFieldHandler('preco', e.target.value)}>{data.preco || ''}</h4>
     </div>
   )
 }
