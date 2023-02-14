@@ -7,7 +7,7 @@ Para acessar o projeto basta seguir essas simples intruções!
 
 crie uma pasta e no terminal de sua preferencia 
 
-git clone https://github.com/rodrigokcarlos/Concessionaria.git
+``git clone https://github.com/rodrigokcarlos/Concessionaria.git``
 
 ### Instalação e execução
  
