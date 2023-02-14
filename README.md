@@ -1,6 +1,6 @@
 # Dudu Seminovos
 
-Readme contém passo a passo para o clone do projeto;
+![logo](https://github.com/rodrigokcarlos/Concessionaria/blob/main/src/assets/dudu.png?raw=true)
 Para acessar o projeto basta seguir essas simples intruções!
 
 ### clone do projeto
