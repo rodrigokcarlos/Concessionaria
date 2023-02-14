@@ -26,8 +26,6 @@ function App() {
           <Route path='/hatch/:id' element={<CarroHatch/>}/>
           <Route path='/sedan/:id' element={<CarroSedan/>}/>
           <Route path='/suv/:id' element={<CarroSUV/>}/>
-          
-          
         </Routes>
      </Router>
     </div>
