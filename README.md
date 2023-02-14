@@ -3,13 +3,13 @@
 Readme contém passo a passo para o clone do projeto;
 Para acessar o projeto basta seguir essas simples intruções!
 
-# clone do projeto
+### clone do projeto
 
 crie uma pasta e no terminal de sua preferencia 
 
 git clone https://github.com/rodrigokcarlos/Concessionaria.git
 
-## Instalação e execução
+### Instalação e execução
  
 npm i
 
