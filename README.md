@@ -9,7 +9,7 @@ crie uma pasta e no terminal de sua preferencia
 
 git clone https://github.com/rodrigokcarlos/Concessionaria.git
 
-#Instalação e execução
+## Instalação e execução
  
 npm i
 
