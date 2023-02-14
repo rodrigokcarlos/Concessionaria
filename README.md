@@ -5,20 +5,22 @@ Para acessar o projeto basta seguir essas simples intruções!
 
 ### clone do projeto
 
-crie uma pasta e no terminal de sua preferencia 
+ crie uma pasta e no terminal de sua preferencia 
 
-``git clone https://github.com/rodrigokcarlos/Concessionaria.git``
+ ``git clone https://github.com/rodrigokcarlos/Concessionaria.git``
 
 ### Instalação e execução
  
-npm i
+ npm i
 
-npm run dev
+ npm run dev
 
-4. Readme listando todos os endpoints utilizados e link para o projeto do Json-server
+ Readme listando todos os endpoints utilizados e link para o projeto do Json-server
 utilizado;
 ### Api e Endpoints
 
-#### Api Base```https://concessionaria.onrender.com```
+ Api Base```https://concessionaria.onrender.com```
 
-5. Readme contém informações como imagens, gráficos, links externos.
+ ``https://concessionaria.onrender.com/Hatch/``
+
+ Readme contém informações como imagens, gráficos, links externos.
