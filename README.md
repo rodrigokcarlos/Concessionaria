@@ -22,5 +22,9 @@ utilizado;
  Api Base```https://concessionaria.onrender.com```
 
  ``https://concessionaria.onrender.com/Hatch/``
+ 
+ ``https://concessionaria.onrender.com/Sedan/``
+  
+ ``https://concessionaria.onrender.com/SUV/``
 
  Readme contém informações como imagens, gráficos, links externos.
