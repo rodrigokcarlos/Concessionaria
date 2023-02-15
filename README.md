@@ -1,6 +1,7 @@
 # Dudu Seminovos
 
-Readme contém passo a passo para o clone do projeto;
+![logo](https://github.com/rodrigokcarlos/Concessionaria/blob/main/src/assets/dudu.png?raw=true)
+
 Para acessar o projeto basta seguir essas simples intruções!
 
 ### clone do projeto
@@ -28,3 +29,5 @@ utilizado;
  ``https://concessionaria.onrender.com/SUV/``
 
  ### Aplicação
+
+![foto concessionaria](https://media.discordapp.net/attachments/645799133847748608/1075160491644686426/image.png?width=1440&height=595)
