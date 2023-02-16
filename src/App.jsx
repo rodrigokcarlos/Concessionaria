@@ -10,9 +10,9 @@ import CarroHatch from './pages/Comprar/Carro/CarroHatch';
 import CarroSedan from './pages/Comprar/Carro/CarroSedan';
 import CarroSUV from './pages/Comprar/Carro/CarroSUV';
 import Finalizar from './pages/Finalizar/Finalizar';
-import AdmHatch from './pages/Comprar/Carro/AdmHatch';
-import AdmSedan from './pages/Comprar/Carro/AdmSedan';
-import AdmSUV from './pages/Comprar/Carro/AdmSUV';
+import AdmHatch from './pages/Editar/AdmHatch';
+import AdmSedan from './pages/Editar/AdmSedan';
+import AdmSUV from './pages/Editar/AdmSUV';
 
 function App() {
   return (
