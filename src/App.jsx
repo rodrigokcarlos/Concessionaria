@@ -10,6 +10,9 @@ import CarroHatch from './pages/Comprar/Carro/CarroHatch';
 import CarroSedan from './pages/Comprar/Carro/CarroSedan';
 import CarroSUV from './pages/Comprar/Carro/CarroSUV';
 import Finalizar from './pages/Finalizar/Finalizar';
+import AdmHatch from './pages/Comprar/Carro/AdmHatch';
+import AdmSedan from './pages/Comprar/Carro/AdmSedan';
+import AdmSUV from './pages/Comprar/Carro/AdmSUV';
 
 function App() {
   return (
@@ -25,8 +28,10 @@ function App() {
           <Route path='/hatch/:id' element={<CarroHatch/>}/>
           <Route path='/sedan/:id' element={<CarroSedan/>}/>
           <Route path='/suv/:id' element={<CarroSUV/>}/>
+          <Route path='/adm/hatch/:id' element={<AdmHatch/>}/>
+          <Route path='/adm/sedan/:id' element={<AdmSedan/>}/>
+          <Route path='/adm/suv/:id' element={<AdmSUV/>}/>
           <Route path='/finalizar' element={<Finalizar/>}/>
-          
         </Routes>
       </Router>
     </div>
