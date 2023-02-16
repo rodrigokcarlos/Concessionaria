@@ -182,3 +182,29 @@
 .troca-texto u{
     cursor: pointer;
 }
+
+/* adm */
+.troca-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 120%;
+}
+.troca-unica-button{
+    margin-bottom: 5px;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 1rem;
+    border: 1px solid darkgrey;
+    color: dimgray;
+    transition: 0.3s;
+}
+.troca-unica-button:hover{
+    transform: scale(1.025);
+    background-color: #e7e7e7;
+    border: 1px solid #3ca0e7;
+    color: #3ca0e7;
+}
