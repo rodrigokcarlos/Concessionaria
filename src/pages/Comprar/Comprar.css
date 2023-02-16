@@ -85,7 +85,12 @@
     width: 80%;
     text-decoration: none;
     margin: 5% 10%;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.linklink {
+    text-decoration: none;
 }
 .baixoBotao{
     border-radius: 15px;

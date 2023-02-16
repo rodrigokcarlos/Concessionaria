@@ -37,7 +37,10 @@ export default function Hatch() {
                   <span className="meioPreco">R$ {carros.preço}</span>
                   <span className="meioKm"><SpeedIcon/>&nbsp; {carros.km} Km</span>
                   <span className="meioAno"><CalendarMonthIcon/>&nbsp; {carros.ano}</span>
-                  <Link className="baixoLinkBotao" to={`/hatch/${carros.id}`}><button className="baixoBotao">Comprar</button></Link>
+                  <div className="baixoLinkBotao">
+                    <Link className='linklink' to={`${carros.id}`}><button className="baixoBotao">Comprar</button></Link>
+                    <Link className='linklink' to={`/adm/hatch/${carros.id}`}><button className="baixoBotao">Editar</button></Link>
+                  </div>
                 </div>
               ))
             )}
